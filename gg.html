@@ -1,0 +1,11 @@
+<html>
+  successful user registration
+  <span id="NAME">Text</span>
+  <script>
+    const url = window.location.search;
+    const params = new URLSearchParams(url);
+    let name = params.get("login");
+    console.log(name);
+    document.getElementById("NAME").innerHTML = name;
+  </script>
+</html>

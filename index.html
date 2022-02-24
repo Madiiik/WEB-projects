@@ -1,26 +1,43 @@
 <html>
-  <head> </head>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+      .b {
+        visibility: hidden;
+      }
+    </style>
+  </head>
   <body>
-    <div>
-      <label id="demo"> Hello World!</label>
-    </div>
-    <div>
-      First number
-      <input type="text" id="n1" />
+    <form id="form" action="gg.html">
+      <label>Login</label>
+      <input type="text" id="login" name="login" value="" onchange="Log()" />
+      <img
+        src="https://cdn.icon-icons.com/icons2/894/PNG/128/Tick_Mark_icon-icons.com_69146.png"
+        id="true"
+        height="20px"
+        class="b"
+      />
       <br />
-      Second number
-      <input type="text" id="n2" />
+      <label>Passwordd</label>
+      <input type="text" id="pass1" onchange="Pass()" />
+      <img
+        src="https://cdn.icon-icons.com/icons2/894/PNG/128/Tick_Mark_icon-icons.com_69146.png"
+        id="true1"
+        height="20px"
+        class="b"
+      />
       <br />
-
-      <input type="button" value="Multiply" onclick="calc(multiply)" />
-      <input type="button" value="Divide" onclick="calc(divide)" />
-      <input type="button" value="Reset" onclick="reset()" />
+      <label class="b" id="textpass">Confirm your password</label>
+      <input type="text" id="pass2" class="b" onchange="Pass1()" />
+      <img
+        src="https://cdn.icon-icons.com/icons2/894/PNG/128/Tick_Mark_icon-icons.com_69146.png"
+        id="true2"
+        height="20px"
+        class="b"
+      />
       <br />
-      <label> result:</label>
-      <br />
-      <label id="result"> </label>
-      <br />
-      <br />
-    </div>
-  <script src="main.js"></script>
+      <input type="submit" name="submit" id="btn" />
+    </form>
+  </body>
 </html>
