@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Documen</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans&family=Ubuntu:wght@400;700&display=swap">
+<link rel="stylesheet" href="main.css">
+	<script src="script.js"></script>
+</head>
+<body>
+
+	<section id="forms" class="forms">
+
+				Password: <input type="password" placeholder="Enter Password" id="truePassword">
+
+				<input type="checkbox" onclick="CheckPassword()">Show
+		</div>
+	</section>
+<script>
+	function CheckPassword() {
+		var x = document.getElementById("truePassword");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+</script>
+</body>
+</html>

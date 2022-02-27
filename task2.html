@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task2</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans&family=Ubuntu:wght@400;700&display=swap">
+<link rel="stylesheet" href="main.css">
+	<meta charset="utf-8">
+</head>
+<body>
+<form method="post">
+	<div>
+		<label for="terms_and_conditions">Make button enable</label>
+		<input type="checkbox" id="terms_and_conditions" value="1" onclick="Poof_poof(this)" />
+	</div>
+	<div>
+		<button type="submit" id="submit_button" disabled>TA-DAAA</button>
+	</div>
+</form>
+<script>
+	function Poof_poof(termsCheckBox){
+
+		if(termsCheckBox.checked){
+
+			document.getElementById("submit_button").disabled = false;
+		} else{
+			
+			document.getElementById("submit_button").disabled = true;
+		}
+	}
+</script>
+</body>
+
+</html>

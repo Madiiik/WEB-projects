@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task3 and task 4-5-6</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans&family=Ubuntu:wght@400;700&display=swap">
+<link rel="stylesheet" href="main.css">
+	<meta charset="utf-8">
+	<style>
+		.scroll {
+			height: 1000px;
+			
+		}
+	</style>
+</head>
+
+
+<body>
+<h1 style="color: purple">
+	Scroll
+</h1>
+
+<container><p class="scroll">
+	Margo Robbie <br>
+	Some information bla bla bla bla bla <br>
+	If I'm in the way of admiring Margot Robbie, click on me
+</p>
+	
+</container>
+
+<div>
+<container>
+<form>
+
+	<h4>At start you can input 15  characters</h4>
+
+
+	<textarea maxlength="15"></textarea>
+
+
+	<h4>
+		But now, 
+		<span class="limit">15</span>
+		Characters Remaining
+	</h4>
+
+</form>
+</container>
+</div>
+<button onclick="scrollToTop()">
+	Click to scroll to top
+</button>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js">
+</script>
+<script>
+	function scrollToTop() {
+		$(window).scrollTop(0);
+	}
+	$('body').css('background-image',
+			'url(images/KGniIn1FxEA.jpg)');
+
+
+	$(document).ready(function () {
+		var max_length = 15;
+		$('textarea').keyup(function () {
+			var len = max_length - $(this).val().length;
+			$('.limit').text(len);
+		});
+
+	});
+
+	$( "p:last" ).click(function() {
+		$( this ).fadeTo( "slow", 0.50 );
+	});
+	$( "#btn1" ).click(function() {
+		$( "imageMR" ).animate({
+			width: "150px",
+			height: "150px",
+		}, 1500 );
+	});
+
+</script>
+</body>
+
+</html>
